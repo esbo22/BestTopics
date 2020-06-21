@@ -1,5 +1,9 @@
 class TopicsController < ApplicationController
 
+  def index
+    @topics = Topic.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
+  end
+
   # GET /topics/1
   def show
     @topic = Topic.find(params[:id])
@@ -8,10 +12,6 @@ class TopicsController < ApplicationController
   # GET /topics/new
   def new
     @topic = Topic.new
-  end
-
-  def index
-    @topics = Topic.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /topics/1/edit
