@@ -1,0 +1,26 @@
+<h1>Sujets de discussion</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Titre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @topics.each do |topic| %>
+    <tr>
+      <td><%= topic.id%></td>
+      <td><%= topic.title%></td>
+      <td><%= link_to "Voir", topic %></td>
+      <td><%= link_to "Éditer", edit_topic_path(topic) %></td>
+      <td><%= link_to "Supprimer", topic, method: :delete, data: { confirm: "sur ?"} %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<%=  will_paginate @topics, renderer: FoundationPagination::Rails %>
+
+<%= link_to "Nouveau sujet", new_topic_path %>

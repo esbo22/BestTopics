@@ -1,0 +1,5 @@
+<h1><%= @topic.title %></h1>
+    <%= simple_format(@topic.content) %>
+
+    <%= link_to"Éditer", edit_topic_path(@topic) %>
+    <%= link_to "Retour index", topics_path %>
