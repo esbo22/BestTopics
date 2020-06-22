@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :topic_answers
+  resources :topic_answers, except: [:index]
 
 end
 =begin
