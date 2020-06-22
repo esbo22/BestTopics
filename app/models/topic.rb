@@ -11,3 +11,7 @@ class Topic < ApplicationRecord
   end
 
 end
+
+# topic.title
+# topic.content
+# topic.???
