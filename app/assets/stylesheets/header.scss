@@ -1,11 +1,14 @@
 @import 'settings';
 
 header .menu {
-  .menu-text, a { color: $white; }
-  li:hover { background-color: rgba(255,255,255,0.2);
+  .menu-text, a {
+    color: $white; }
+  a:hover {
+    background-color: rgba(255,255,255,0.2);
+  }
 
-    &.menu-text {
-      background: none;
-    }
+  img.logo {
+    height: 40px;
+    filter: invert(1);
   }
 }

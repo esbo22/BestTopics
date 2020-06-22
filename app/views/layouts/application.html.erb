@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "BestBlog" %></title>
+    <title><%= @title %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <!--javascript_include_tag "application", 'data-turbolinks-track' => true %>-->
@@ -17,6 +17,9 @@
       <div class="top-bar">
         <div class="top-bar-left">
           <ul class="menu">
+            <li>
+              <%= image_tag("vador.png", alt: "logo", class: "logo") %>
+            </li>
             <li class="menu-text">BestTopics</li>
             <li><%= link_to "Accueil", root_path %></li>
             <li><%= link_to "Liste des sujets", topics_path %></li>
