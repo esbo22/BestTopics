@@ -39,6 +39,7 @@ gem 'autoprefixer-rails'
 gem 'simple_form' #https://github.com/heartcombo/simple_form
 gem 'will_paginate', '~> 3.1.0' #https://github.com/mislav/will_paginate
 gem 'will_paginate-foundation'
+gem "font-awesome-rails" #https://github.com/bokmann/font-awesome-rails
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
