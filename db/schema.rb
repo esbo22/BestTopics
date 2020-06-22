@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_22_081913) do
+ActiveRecord::Schema.define(version: 2020_06_22_121746) do
+
+  create_table "topic_answers", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.boolean "published"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "topics", force: :cascade do |t|
     t.string "title"

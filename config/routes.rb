@@ -11,6 +11,9 @@ Rails.application.routes.draw do
       get 'published'
     end
   end
+
+  resources :topic_answers
+
 end
 =begin
 #rake routes
