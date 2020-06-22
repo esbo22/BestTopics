@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   get "profile" => "users#profile"
 
   # Topics
-  resources :topics
+  resources :topics do
+    collection do
+      get 'published'
+    end
+  end
 end
 =begin
 #rake routes
