@@ -1,0 +1,11 @@
+@import 'settings';
+
+header .menu {
+  .menu-text, a { color: $white; }
+  li:hover { background-color: rgba(255,255,255,0.2);
+
+    &.menu-text {
+      background: none;
+    }
+  }
+}
