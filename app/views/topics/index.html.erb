@@ -27,5 +27,5 @@
   </tbody>
 </table>
 <%=  will_paginate @topics, renderer: FoundationPagination::Rails %>
-
+<%= link_to "Sujet publiés", published_topics_path %>
 <%= link_to "Nouveau sujet", new_topic_path %>
